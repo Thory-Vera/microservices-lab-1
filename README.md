@@ -1,25 +1,46 @@
-# microservices-lab
-# Laboratorio de Microservicios (Django + React)
+Microservices Lab
 
-##  Arquitectura inicial
+Laboratorio práctico de microservicios usando Django y React.
 
-- **auth-service/** → Autenticación y tokens JWT  
-- **blog-service/** → Publicaciones, autores y categorías  
-- **email-service/** → Notificaciones y formularios  
-- **frontend/** → Interfaz React  
-- **reverse-proxy/** → Balanceo / Gateway local  
+🏗 Arquitectura del proyecto
 
-###  Servicios base
-- PostgreSQL (5432)
-- Redis (6379)
+El proyecto está dividido en varios servicios independientes:
 
-##  Mini-reto del día
-1. Levantar los contenedores (`docker compose up -d`)
-2. Crear `auth-service/test_connection.py` para probar conexión a PostgreSQL y Redis.
-3. Ejecutarlo dentro del contenedor (`docker exec -it ...`)
+auth-service/ → Manejo de autenticación y generación de tokens JWT
 
-##  Checklist
-- [x] Estructura base creada
-- [x] Git y GitHub configurados
-- [x] Docker Compose funcional
-- [x] README documentado
+blog-service/ → Gestión de publicaciones, autores y categorías
+
+email-service/ → Envío de notificaciones y formularios
+
+frontend/ → Interfaz web desarrollada en React
+
+reverse-proxy/ → Gateway local y balanceo de solicitudes
+
+🧩 Servicios auxiliares
+
+PostgreSQL: Base de datos principal (puerto 5432)
+
+Redis: Caché y almacenamiento temporal (puerto 6379)
+
+🧪 Reto práctico de hoy
+
+Levantar todos los contenedores:
+
+docker compose up -d
+
+
+Crear un script de prueba de conexión en auth-service/test_connection.py para PostgreSQL y Redis.
+
+Ejecutar el script dentro del contenedor correspondiente:
+
+docker exec -it <nombre_contenedor> python test_connection.py
+
+✅ Estado del proyecto
+
+ Estructura de carpetas inicial configurada
+
+ Repositorio Git y GitHub preparados
+
+ Docker Compose funcional
+
+ Documentación básica en README
